@@ -174,16 +174,16 @@ export const PORTFOLIO_DATA = {
     },
     {
       platform: "GeeksforGeeks",
-      username: "surajg2",
-      url: "https://www.geeksforgeeks.org/profile/surajg2",
+      username: "g8808jimh",
+      url: "https://www.geeksforgeeks.org/profile/g8808jimh",
       icon: "https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000",
       stats: "Overall Score: 850+",
       color: "#2F9E44"
     },
     {
       platform: "HackerRank",
-      username: "surajg2",
-      url: "https://www.hackerrank.com/surajg2",
+      username: "g88084011",
+      url: "https://www.hackerrank.com/profile/g88084011",
       icon: "https://img.icons8.com/?size=100&id=QrYhwpUzAcoy&format=png&color=000000",
       stats: "5★ Problem Solving",
       color: "#2EC4B6"

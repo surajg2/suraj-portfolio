@@ -4,6 +4,29 @@ import { PORTFOLIO_DATA } from '../data/portfolioData';
 export const CoreStackSection: React.FC = () => {
   const { coreStack } = PORTFOLIO_DATA;
 
+  const rows = [
+    {
+      num: "01",
+      title: "DATA SCIENCE & MACHINE LEARNING",
+      items: coreStack.filter(t => ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "R"].includes(t.name))
+    },
+    {
+      num: "02",
+      title: "DATABASES & BIG DATA PIPELINES",
+      items: coreStack.filter(t => ["SQL", "PostgreSQL", "MongoDB", "MySQL", "Apache Spark", "Apache Kafka", "DBeaver"].includes(t.name))
+    },
+    {
+      num: "03",
+      title: "CLOUD ARCHITECTURE & DEVOPS",
+      items: coreStack.filter(t => ["AWS", "GCP BigQuery", "Docker", "GitHub"].includes(t.name))
+    },
+    {
+      num: "04",
+      title: "DATA VISUALIZATION & APIS",
+      items: coreStack.filter(t => ["Streamlit", "Power BI", "Tableau", "FastAPI", "Jupyter"].includes(t.name))
+    }
+  ];
+
   return (
     <section id="stack" className="relative w-full py-8 px-3 sm:px-6 md:px-8">
       {/* Editorial Light Container Card Matching Hero Card */}
@@ -24,36 +47,50 @@ export const CoreStackSection: React.FC = () => {
             </h2>
           </div>
           <p className="max-w-md text-xs sm:text-sm text-neutral-700 font-medium leading-relaxed font-sans md:text-right">
-            Hand-crafted suite of database engines, ML frameworks, cloud services, and visualization tools powering my data analytics &amp; engineering workflows.
+            Organized suite of database engines, ML frameworks, cloud services, and visualization tools powering my data analytics &amp; engineering workflows.
           </p>
         </div>
 
-        {/* Reference-Styled Fluid Pill Cluster Layout */}
-        <div className="flex flex-wrap gap-2.5 sm:gap-3.5 pt-2 justify-start items-center">
-          {coreStack.map((tech) => (
-            <div
-              key={tech.name}
-              className="bg-white/95 backdrop-blur-sm border border-black/10 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center gap-2.5 sm:gap-3 shadow-[0_2px_6px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-black/30 hover:-translate-y-0.5 transition-all duration-300 group cursor-default"
-            >
-              {/* Left Brand Icon */}
-              <img
-                src={tech.icon}
-                alt={tech.name}
-                className="w-4 h-4 sm:w-5 sm:h-5 object-contain rounded shrink-0 transition-transform duration-300 group-hover:scale-110"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
-              />
+        {/* Structured Editorial Rows (Clean & Non-Cluttered) */}
+        <div className="flex flex-col gap-8 pt-2">
+          {rows.map((row) => (
+            <div key={row.num} className="flex flex-col gap-3.5 border-b border-black/10 pb-6 last:border-0 last:pb-0">
+              
+              {/* Row Category Title */}
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-black text-amber-700 bg-amber-100/80 px-2 py-0.5 rounded font-mono">
+                  {row.num}
+                </span>
+                <span className="text-[0.7rem] font-extrabold tracking-[0.2em] text-[#111111] uppercase font-sans">
+                  {row.title}
+                </span>
+              </div>
 
-              {/* Bold Technology Title */}
-              <span className="text-xs sm:text-sm font-extrabold text-[#0f0f0f] font-sans tracking-tight group-hover:text-black">
-                {tech.name}
-              </span>
+              {/* Clean Pill Badges Row */}
+              <div className="flex flex-wrap gap-2.5 sm:gap-3 items-center">
+                {row.items.map((tech) => (
+                  <div
+                    key={tech.name}
+                    className="bg-white/95 backdrop-blur-sm border border-black/10 px-4 py-2 rounded-full flex items-center gap-2.5 shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-black/30 hover:-translate-y-0.5 transition-all duration-300 group cursor-default"
+                  >
+                    <img
+                      src={tech.icon}
+                      alt={tech.name}
+                      className="w-4 h-4 object-contain rounded shrink-0 transition-transform duration-300 group-hover:scale-110"
+                      onError={(e) => {
+                        (e.target as HTMLElement).style.display = 'none';
+                      }}
+                    />
+                    <span className="text-xs font-extrabold text-[#0f0f0f] font-sans tracking-tight group-hover:text-black">
+                      {tech.name}
+                    </span>
+                    <span className="text-[0.55rem] font-bold uppercase tracking-widest text-neutral-400 font-sans ml-0.5 group-hover:text-neutral-600 transition-colors">
+                      {tech.category}
+                    </span>
+                  </div>
+                ))}
+              </div>
 
-              {/* Right Category Label (Matching Reference Screenshot) */}
-              <span className="text-[0.55rem] sm:text-[0.6rem] font-bold uppercase tracking-widest text-neutral-400 font-sans ml-0.5 group-hover:text-neutral-600 transition-colors">
-                {tech.category}
-              </span>
             </div>
           ))}
         </div>

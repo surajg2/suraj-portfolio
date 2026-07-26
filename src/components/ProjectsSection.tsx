@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowUpRight, Github, FolderGit2, BookOpen, X, Sparkles, ChevronRight, Layers } from 'lucide-react';
+import { ArrowUpRight, Github, FolderGit2, BookOpen, X, Sparkles, ChevronRight } from 'lucide-react';
 import { PORTFOLIO_DATA, ProjectItem } from '../data/portfolioData';
 
 export const ProjectsSection: React.FC = () => {
@@ -19,7 +19,7 @@ export const ProjectsSection: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,7 +37,7 @@ export const ProjectsSection: React.FC = () => {
             <div className="flex items-center gap-3 mb-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#111111] animate-pulse" />
               <p className="text-xs sm:text-sm font-extrabold tracking-[0.25em] text-[#111111] uppercase font-sans">
-                DUAL EXHIBITION • WORK &amp; INSIGHTS
+                WORK &amp; INSIGHTS • DUAL EXHIBITION
               </p>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0f0f0f] leading-none font-display">
@@ -57,99 +57,81 @@ export const ProjectsSection: React.FC = () => {
           )}
         </div>
 
-        {/* 1. INITIAL DUAL-PANEL SPLIT VIEW (Visual Image Covers -> Scroll Reveals Text -> Click Expands) */}
+        {/* 1. INITIAL DUAL-PANEL SPLIT VIEW (Visual Image Covers -> Scroll Reveals Minimal Text -> Click Expands) */}
         {expandedPanel === 'none' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[420px] transition-all duration-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[400px] transition-all duration-700">
             
-            {/* LEFT PANEL: PROJECTS */}
+            {/* LEFT PANEL: EXPLORE PROJECTS */}
             <div
               onClick={() => setExpandedPanel('projects')}
-              className="group relative rounded-3xl overflow-hidden cursor-pointer border border-black/10 shadow-lg min-h-[380px] sm:min-h-[440px] flex flex-col justify-between p-6 sm:p-8 transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl bg-stone-900"
+              className="group relative rounded-3xl overflow-hidden cursor-pointer border border-black/10 shadow-lg min-h-[360px] sm:min-h-[420px] flex flex-col justify-between p-6 sm:p-8 transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl bg-stone-900"
             >
-              {/* Pure High-Definition Background Image Cover */}
+              {/* Project-Word Related Graphic Artwork */}
               <img
-                src={projectItems[0]?.image || "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1000&q=80"}
-                alt="Projects Cover"
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-90"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                alt="Explore Projects"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-85"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
 
               {/* Top Badge */}
               <div className="relative z-10 flex items-center justify-between">
-                <span className="bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-[0.65rem] font-mono font-black text-amber-400 border border-white/10 uppercase tracking-widest">
-                  01 / PROJECTS
+                <span className="bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-[0.65rem] font-mono font-black text-amber-400 border border-white/10 uppercase tracking-widest flex items-center gap-1.5">
+                  <FolderGit2 className="w-3.5 h-3.5" />
+                  <span>01 / REPOSITORIES</span>
                 </span>
                 <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
                   <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
                 </div>
               </div>
 
-              {/* Text Content: Revealed ONLY AFTER Scrolling into View */}
+              {/* Minimal Text: Revealed ONLY AFTER Scrolling into View */}
               <div
                 className={`relative z-10 text-white transition-all duration-700 transform ${
                   hasScrolledIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}
               >
-                <div className="flex items-center gap-2 text-xs font-mono font-extrabold uppercase tracking-widest text-amber-400 mb-2">
-                  <FolderGit2 className="w-4 h-4" />
-                  <span>REAL-WORLD REPOS</span>
-                </div>
-                <h3 className="text-2xl sm:text-4xl font-black uppercase font-display leading-tight mb-2 group-hover:text-amber-400 transition-colors">
-                  EXPLORE PROJECTS
+                <h3 className="text-3xl sm:text-5xl font-black uppercase font-display leading-none group-hover:text-amber-400 transition-colors flex items-center gap-3">
+                  <span>EXPLORE PROJECTS</span>
+                  <ChevronRight className="w-6 h-6 text-amber-400 group-hover:translate-x-2 transition-transform" />
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-300 font-sans leading-relaxed max-w-sm mb-4">
-                  Computer vision dumbbell detection, India's Medicine Bank, and IBM machine learning analytics.
-                </p>
-                <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-widest uppercase text-white group-hover:underline">
-                  <span>CLICK TO UNLOCK CATALOG</span>
-                  <ChevronRight className="w-4 h-4" />
-                </span>
               </div>
             </div>
 
-            {/* RIGHT PANEL: DEVLOGS & MY STORY */}
+            {/* RIGHT PANEL: DEVLOGS & STORY */}
             <div
               onClick={() => setExpandedPanel('devlogs')}
-              className="group relative rounded-3xl overflow-hidden cursor-pointer border border-black/10 shadow-lg min-h-[380px] sm:min-h-[440px] flex flex-col justify-between p-6 sm:p-8 transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl bg-stone-900"
+              className="group relative rounded-3xl overflow-hidden cursor-pointer border border-black/10 shadow-lg min-h-[360px] sm:min-h-[420px] flex flex-col justify-between p-6 sm:p-8 transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl bg-stone-900"
             >
-              {/* Pure High-Definition Background Image Cover */}
+              {/* Devlog & Architecture Related Graphic Artwork */}
               <img
-                src={devlogItems[0]?.image || "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80"}
-                alt="Devlogs Cover"
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-90"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80"
+                alt="Devlogs & Story"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-85"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
 
               {/* Top Badge */}
               <div className="relative z-10 flex items-center justify-between">
-                <span className="bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-[0.65rem] font-mono font-black text-amber-400 border border-white/10 uppercase tracking-widest">
-                  02 / DEVLOGS
+                <span className="bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-[0.65rem] font-mono font-black text-amber-400 border border-white/10 uppercase tracking-widest flex items-center gap-1.5">
+                  <BookOpen className="w-3.5 h-3.5" />
+                  <span>02 / DEVLOGS</span>
                 </span>
                 <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
                   <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
                 </div>
               </div>
 
-              {/* Text Content: Revealed ONLY AFTER Scrolling into View */}
+              {/* Minimal Text: Revealed ONLY AFTER Scrolling into View */}
               <div
                 className={`relative z-10 text-white transition-all duration-700 transform ${
                   hasScrolledIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}
               >
-                <div className="flex items-center gap-2 text-xs font-mono font-extrabold uppercase tracking-widest text-amber-400 mb-2">
-                  <BookOpen className="w-4 h-4" />
-                  <span>DEVLOGS &amp; ARCHITECTURE</span>
-                </div>
-                <h3 className="text-2xl sm:text-4xl font-black uppercase font-display leading-tight mb-2 group-hover:text-amber-400 transition-colors">
-                  DEVLOGS &amp; STORY
+                <h3 className="text-3xl sm:text-5xl font-black uppercase font-display leading-none group-hover:text-amber-400 transition-colors flex items-center gap-3">
+                  <span>DEVLOGS &amp; STORY</span>
+                  <ChevronRight className="w-6 h-6 text-amber-400 group-hover:translate-x-2 transition-transform" />
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-300 font-sans leading-relaxed max-w-sm mb-4">
-                  Deep engineering breakdowns on OpenCV pose pipelines, SQLite healthcare schemas, and model deployment.
-                </p>
-                <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-widest uppercase text-white group-hover:underline">
-                  <span>CLICK TO READ INSIGHTS</span>
-                  <ChevronRight className="w-4 h-4" />
-                </span>
               </div>
             </div>
 

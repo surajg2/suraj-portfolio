@@ -1,70 +1,75 @@
 import React from 'react';
-import { ExternalLink, Code2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export const CodingProfilesSection: React.FC = () => {
   const { codingProfiles } = PORTFOLIO_DATA;
 
   return (
-    <section id="profiles" className="relative w-full py-24 px-6 md:px-16 bg-[#080808] text-white z-20">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pb-6 border-b border-white/10">
+    <section id="profiles" className="relative w-full py-8 px-3 sm:px-6 md:px-8">
+      {/* Editorial Light Container Card Matching Hero Card Theme */}
+      <div className="relative w-full max-w-7xl mx-auto bg-[#eae8e3] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 overflow-hidden shadow-2xl border border-black/5 flex flex-col gap-10">
+        
+        {/* Top Minimal Header Row */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-black/10 pb-6">
           <div>
-            <span className="text-xs font-extrabold uppercase tracking-[0.3em] text-[#FF3D00] mb-2 block">
-              Competitive Programming
-            </span>
-            <h2 className="text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-              Coding Profiles
+            <div className="flex items-center gap-3 mb-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#111111]" />
+              <p className="text-xs sm:text-sm font-extrabold tracking-[0.25em] text-[#111111] uppercase font-sans">
+                COMPETITIVE PROGRAMMING • ALGORITHMS
+              </p>
+            </div>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0f0f0f] leading-none font-display">
+              CODING <span className="font-serif italic font-normal text-[#111111]">PROFILES</span>
             </h2>
           </div>
-          <p className="max-w-md text-sm text-white/60 leading-relaxed md:text-right">
-            My journey across various platforms, solving complex algorithmic challenges and data science problems.
+          <p className="max-w-sm text-xs sm:text-sm text-neutral-700 font-medium leading-relaxed font-sans sm:text-right">
+            Algorithmic problem solving and data science challenge standings across competitive platforms.
           </p>
         </div>
 
-        {/* Profiles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {/* Minimal Editorial Pill List */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {codingProfiles.map((profile) => (
             <a
               key={profile.platform}
               href={profile.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between group relative overflow-hidden"
+              className="bg-white/95 backdrop-blur-sm border border-black/10 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-black/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-4 group cursor-pointer"
             >
-              <div
-                className="absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl pointer-events-none opacity-20 group-hover:opacity-40 transition-opacity"
-                style={{ backgroundColor: profile.color }}
-              />
-
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 p-2.5 flex items-center justify-center">
-                  <img
-                    src={profile.icon}
-                    alt={profile.platform}
-                    className="w-full h-full object-contain"
-                    onError={(e) => {
-                      (e.target as HTMLElement).style.display = 'none';
-                    }}
-                  />
+              <div className="flex items-center justify-between">
+                <img
+                  src={profile.icon}
+                  alt={profile.platform}
+                  className="w-7 h-7 object-contain rounded"
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = 'none';
+                  }}
+                />
+                <div className="w-7 h-7 rounded-full bg-[#f3f1ea] flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors">
+                  <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
                 </div>
-                <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-white transition-colors" />
               </div>
 
               <div>
-                <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#FF3D00] transition-colors">
+                <h3 className="text-base font-black text-[#0f0f0f] tracking-tight font-sans">
                   {profile.platform}
                 </h3>
-                <p className="text-xs font-mono text-white/50 mb-3">@{profile.username}</p>
-                <div className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[0.7rem] font-medium text-white/80 flex items-center gap-2">
-                  <Code2 className="w-3.5 h-3.5 text-[#FF3D00]" />
-                  <span>{profile.stats}</span>
-                </div>
+                <p className="text-[0.65rem] font-extrabold uppercase tracking-widest text-neutral-500 font-sans">
+                  @{profile.username}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-black/5">
+                <span className="text-[0.65rem] font-mono font-bold text-neutral-800">
+                  {profile.stats}
+                </span>
               </div>
             </a>
           ))}
         </div>
+
       </div>
     </section>
   );

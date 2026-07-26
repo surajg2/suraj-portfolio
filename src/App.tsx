@@ -4,6 +4,7 @@ import { CustomCursor } from './components/CustomCursor';
 import { GridOverlay } from './components/GridOverlay';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
+import { AboutSection } from './components/AboutSection';
 import { CoreStackSection } from './components/CoreStackSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { CodingProfilesSection } from './components/CodingProfilesSection';
@@ -29,6 +30,7 @@ export const App: React.FC = () => {
       {/* Main Content Layer */}
       <main className="relative z-10">
         <HeroSection />
+        <AboutSection />
         <CoreStackSection />
         <ProjectsSection />
         <CodingProfilesSection />

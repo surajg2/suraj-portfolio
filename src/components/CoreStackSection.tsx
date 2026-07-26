@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export const CoreStackSection: React.FC = () => {
   const { coreStack } = PORTFOLIO_DATA;
-  const [activeCategory, setActiveCategory] = useState<string>('ALL');
 
-  const categories = [
-    'ALL',
-    'Data Science',
-    'AI/ML',
-    'Database',
-    'DevOps',
-    'Frontend',
-    'Tools'
+  // Group technologies into bespoke editorial clusters
+  const analyticsAndML = coreStack.filter(t => ['SQL', 'Python', 'Pandas', 'NumPy', 'R', 'Scikit-learn', 'PyTorch', 'TensorFlow', 'OpenCV'].includes(t.name));
+  const dataEngAndCloud = coreStack.filter(t => ['PostgreSQL', 'MongoDB', 'Apache Spark', 'Apache Kafka', 'MySQL', 'AWS', 'GCP BigQuery', 'Docker'].includes(t.name));
+  const vizAndTools = coreStack.filter(t => ['Streamlit', 'Power BI', 'Tableau', 'FastAPI', 'Jupyter', 'DBeaver', 'Git & GitHub'].includes(t.name));
+
+  const clusters = [
+    { title: "DATA ANALYTICS & MACHINE LEARNING", items: analyticsAndML },
+    { title: "DATA ENGINEERING, DATABASES & CLOUD", items: dataEngAndCloud },
+    { title: "VISUALIZATION, APIS & ANALYTICAL TOOLS", items: vizAndTools },
   ];
-
-  const filteredStack = activeCategory === 'ALL'
-    ? coreStack
-    : coreStack.filter(item => item.category === activeCategory);
 
   return (
     <section id="stack" className="relative w-full py-8 px-3 sm:px-6 md:px-8">
@@ -39,49 +35,38 @@ export const CoreStackSection: React.FC = () => {
             </h2>
           </div>
           <p className="max-w-md text-xs sm:text-sm text-neutral-700 font-medium leading-relaxed font-sans md:text-right">
-            Curated set of frameworks, database engines, cloud services, and machine learning libraries powering my data analytics &amp; engineering pipelines.
+            A hand-picked selection of database engines, cloud services, and machine learning frameworks used in my data pipelines.
           </p>
         </div>
 
-        {/* Category Filter Pills */}
-        <div className="flex flex-wrap gap-2 pt-2">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase transition-all duration-300 ${
-                activeCategory === cat
-                  ? 'bg-black text-white shadow-md scale-105'
-                  : 'bg-white/80 text-neutral-800 hover:bg-black/10 border border-black/5'
-              }`}
-            >
-              {cat === 'ALL' ? 'ALL TOOLS' : cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Tech Stack Badges Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 pt-2">
-          {filteredStack.map((tech) => (
-            <div
-              key={tech.name}
-              className="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-black/5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center gap-2.5 group"
-            >
-              <img
-                src={tech.icon}
-                alt={tech.name}
-                className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
-              />
-              <div className="flex flex-col items-center">
-                <span className="text-xs font-black text-[#0f0f0f] font-sans group-hover:text-black">
-                  {tech.name}
-                </span>
-                <span className="text-[0.6rem] font-bold uppercase tracking-wider text-neutral-500 mt-0.5">
-                  {tech.category}
-                </span>
+        {/* Bespoke Editorial Clusters (No generic grid boxes) */}
+        <div className="flex flex-col gap-8 pt-2">
+          {clusters.map((cluster, cIdx) => (
+            <div key={cIdx} className="flex flex-col gap-4 border-b border-black/5 pb-6 last:border-0 last:pb-0">
+              <span className="text-[0.65rem] font-black tracking-[0.25em] text-neutral-600 uppercase font-sans">
+                {cluster.title}
+              </span>
+              
+              {/* Fluid Pill Badges directly on editorial canvas */}
+              <div className="flex flex-wrap gap-2.5">
+                {cluster.items.map((tech) => (
+                  <div
+                    key={tech.name}
+                    className="group bg-[#0f0f0f] text-white px-4 sm:px-5 py-2.5 rounded-full text-xs font-black tracking-wider uppercase border border-black/10 hover:bg-black hover:scale-105 transition-all duration-300 shadow-sm flex items-center gap-2.5 cursor-default"
+                  >
+                    <img
+                      src={tech.icon}
+                      alt={tech.name}
+                      className="w-4 h-4 object-contain brightness-0 filter invert opacity-90 group-hover:opacity-100 transition-opacity"
+                      onError={(e) => {
+                        (e.target as HTMLElement).style.display = 'none';
+                      }}
+                    />
+                    <span className="font-sans font-extrabold text-white text-xs">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

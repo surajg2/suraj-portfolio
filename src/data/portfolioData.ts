@@ -91,7 +91,7 @@ export const PORTFOLIO_DATA = {
       tags: ["OpenCV", "Python", "Machine Learning", "PyTorch"],
       githubUrl: "https://github.com/surajg2/dumbell_detection",
       liveUrl: "https://github.com/surajg2/dumbell_detection",
-      image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1000&q=80",
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80",
       date: "2024",
       highlights: ["Real-Time Rep Counting", "OpenCV Pose Tracking", "Custom ML Metrics"]
     },
@@ -104,7 +104,7 @@ export const PORTFOLIO_DATA = {
       tags: ["Python", "Flask", "SQLite", "Render Cloud"],
       githubUrl: "https://github.com/surajg2/IMB-Indias-Medicine-Bank-",
       liveUrl: "https://github.com/surajg2/IMB-Indias-Medicine-Bank-",
-      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
       date: "2024",
       highlights: ["Automated Expiry Tracking", "SQLite Database", "Cloud Deployment"]
     },
@@ -117,7 +117,7 @@ export const PORTFOLIO_DATA = {
       tags: ["Python", "SQL", "Scikit-Learn", "EDA"],
       githubUrl: "https://github.com/surajg2/IBM",
       liveUrl: "https://github.com/surajg2/IBM",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
       date: "2024",
       highlights: ["Exploratory Data Analysis", "ML Model Evaluation", "SQL Warehousing"]
     },

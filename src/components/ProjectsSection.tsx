@@ -81,7 +81,7 @@ export const ProjectsSection: React.FC = () => {
               className="group relative rounded-3xl overflow-hidden cursor-pointer border border-black/10 shadow-lg min-h-[360px] sm:min-h-[420px] flex flex-col justify-between p-6 sm:p-8 transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl bg-stone-900"
             >
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
                 alt="Explore Projects"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-85"
               />
@@ -118,7 +118,7 @@ export const ProjectsSection: React.FC = () => {
               className="group relative rounded-3xl overflow-hidden cursor-pointer border border-black/10 shadow-lg min-h-[360px] sm:min-h-[420px] flex flex-col justify-between p-6 sm:p-8 transition-all duration-700 hover:scale-[1.01] hover:shadow-2xl bg-stone-900"
             >
               <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=1200&q=80"
                 alt="Devlogs & Story"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-85"
               />

@@ -11,11 +11,14 @@ export const ContactFooter: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.name && formData.email && formData.message) {
+      const mailtoUrl = `mailto:${profile.email}?subject=Portfolio Inquiry from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${encodeURIComponent(formData.name)} (${encodeURIComponent(formData.email)})`;
+      window.location.href = mailtoUrl;
+
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
         setFormData({ name: '', email: '', message: '' });
-      }, 4000);
+      }, 6000);
     }
   };
 
@@ -68,12 +71,34 @@ export const ContactFooter: React.FC = () => {
             </h3>
 
             {submitted ? (
-              <div className="py-8 flex flex-col items-center justify-center text-center gap-3">
-                <CheckCircle2 className="w-10 h-10 text-emerald-700 animate-bounce" />
-                <h4 className="text-lg font-black text-[#0f0f0f] uppercase">Message Sent Successfully!</h4>
-                <p className="text-xs text-neutral-600 font-sans">
-                  Thank you for reaching out, Suraj will reply to your email shortly.
-                </p>
+              <div className="py-6 flex flex-col sm:flex-row items-center gap-6 animate-fadeIn bg-[#f3f1ea] p-6 rounded-2xl border border-black/10">
+                {/* Suraj Hero Portrait Cutout Frame */}
+                <div className="relative w-28 sm:w-36 h-36 sm:h-44 rounded-2xl overflow-hidden shadow-lg border border-black/10 shrink-0 bg-stone-900">
+                  <img
+                    src="/hero_portrait.png?v=rembg100"
+                    alt="Suraj Gupta"
+                    className="w-full h-full object-cover object-top filter brightness-[1.02]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-1 right-1 text-center text-[0.55rem] font-mono font-black text-amber-400 uppercase tracking-widest">
+                    SURAJ GUPTA
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-2 text-center sm:text-left">
+                  <div className="flex items-center justify-center sm:justify-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-700 shrink-0" />
+                    <span className="text-xs font-mono font-black uppercase text-emerald-800 tracking-wider">
+                      INQUIRY SENT DIRECTLY
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-black text-[#0f0f0f] uppercase font-sans">
+                    THANK YOU FOR REACHING OUT!
+                  </h4>
+                  <p className="text-xs text-neutral-700 font-medium leading-relaxed font-sans">
+                    Suraj has received your message and will get back to you at your email address shortly.
+                  </p>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4 font-sans">

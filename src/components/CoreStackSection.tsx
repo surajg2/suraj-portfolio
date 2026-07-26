@@ -4,17 +4,6 @@ import { PORTFOLIO_DATA } from '../data/portfolioData';
 export const CoreStackSection: React.FC = () => {
   const { coreStack } = PORTFOLIO_DATA;
 
-  // Group technologies into bespoke editorial clusters
-  const analyticsAndML = coreStack.filter(t => ['SQL', 'Python', 'Pandas', 'NumPy', 'R', 'Scikit-learn', 'PyTorch', 'TensorFlow', 'OpenCV'].includes(t.name));
-  const dataEngAndCloud = coreStack.filter(t => ['PostgreSQL', 'MongoDB', 'Apache Spark', 'Apache Kafka', 'MySQL', 'AWS', 'GCP BigQuery', 'Docker'].includes(t.name));
-  const vizAndTools = coreStack.filter(t => ['Streamlit', 'Power BI', 'Tableau', 'FastAPI', 'Jupyter', 'DBeaver', 'Git & GitHub'].includes(t.name));
-
-  const clusters = [
-    { title: "DATA ANALYTICS & MACHINE LEARNING", items: analyticsAndML },
-    { title: "DATA ENGINEERING, DATABASES & CLOUD", items: dataEngAndCloud },
-    { title: "VISUALIZATION, APIS & ANALYTICAL TOOLS", items: vizAndTools },
-  ];
-
   return (
     <section id="stack" className="relative w-full py-8 px-3 sm:px-6 md:px-8">
       {/* Editorial Light Container Card Matching Hero Card */}
@@ -35,39 +24,36 @@ export const CoreStackSection: React.FC = () => {
             </h2>
           </div>
           <p className="max-w-md text-xs sm:text-sm text-neutral-700 font-medium leading-relaxed font-sans md:text-right">
-            A hand-picked selection of database engines, cloud services, and machine learning frameworks used in my data pipelines.
+            Hand-crafted suite of database engines, ML frameworks, cloud services, and visualization tools powering my data analytics &amp; engineering workflows.
           </p>
         </div>
 
-        {/* Bespoke Editorial Clusters (No generic grid boxes) */}
-        <div className="flex flex-col gap-8 pt-2">
-          {clusters.map((cluster, cIdx) => (
-            <div key={cIdx} className="flex flex-col gap-4 border-b border-black/5 pb-6 last:border-0 last:pb-0">
-              <span className="text-[0.65rem] font-black tracking-[0.25em] text-neutral-600 uppercase font-sans">
-                {cluster.title}
+        {/* Reference-Styled Fluid Pill Cluster Layout */}
+        <div className="flex flex-wrap gap-2.5 sm:gap-3.5 pt-2 justify-start items-center">
+          {coreStack.map((tech) => (
+            <div
+              key={tech.name}
+              className="bg-white/95 backdrop-blur-sm border border-black/10 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center gap-2.5 sm:gap-3 shadow-[0_2px_6px_rgba(0,0,0,0.03)] hover:shadow-md hover:border-black/30 hover:-translate-y-0.5 transition-all duration-300 group cursor-default"
+            >
+              {/* Left Brand Icon */}
+              <img
+                src={tech.icon}
+                alt={tech.name}
+                className="w-4 h-4 sm:w-5 sm:h-5 object-contain rounded shrink-0 transition-transform duration-300 group-hover:scale-110"
+                onError={(e) => {
+                  (e.target as HTMLElement).style.display = 'none';
+                }}
+              />
+
+              {/* Bold Technology Title */}
+              <span className="text-xs sm:text-sm font-extrabold text-[#0f0f0f] font-sans tracking-tight group-hover:text-black">
+                {tech.name}
               </span>
-              
-              {/* Fluid Pill Badges directly on editorial canvas */}
-              <div className="flex flex-wrap gap-2.5">
-                {cluster.items.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="group bg-[#0f0f0f] text-white px-4 sm:px-5 py-2.5 rounded-full text-xs font-black tracking-wider uppercase border border-black/10 hover:bg-black hover:scale-105 transition-all duration-300 shadow-sm flex items-center gap-2.5 cursor-default"
-                  >
-                    <img
-                      src={tech.icon}
-                      alt={tech.name}
-                      className="w-4 h-4 object-contain brightness-0 filter invert opacity-90 group-hover:opacity-100 transition-opacity"
-                      onError={(e) => {
-                        (e.target as HTMLElement).style.display = 'none';
-                      }}
-                    />
-                    <span className="font-sans font-extrabold text-white text-xs">
-                      {tech.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
+
+              {/* Right Category Label (Matching Reference Screenshot) */}
+              <span className="text-[0.55rem] sm:text-[0.6rem] font-bold uppercase tracking-widest text-neutral-400 font-sans ml-0.5 group-hover:text-neutral-600 transition-colors">
+                {tech.category}
+              </span>
             </div>
           ))}
         </div>

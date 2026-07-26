@@ -1,37 +1,12 @@
 import React from 'react';
-import { MapPin, Sparkles, BookOpen, BrainCircuit, BarChart3, Database, GraduationCap, Cloud, LineChart, Code2 } from 'lucide-react';
+import { MapPin, Sparkles, BrainCircuit, GraduationCap } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export const AboutSection: React.FC = () => {
-  const stats = [
-    { label: 'Datasets & Models', value: '50+' },
-    { label: 'Location', value: 'Mumbai' },
-    { label: 'B.Tech CSE-DS', value: '3rd Year' },
-    { label: 'SQL & Algo Solved', value: '350+' },
-  ];
-
-  const coreFocus = [
-    {
-      icon: <BarChart3 className="w-5 h-5 text-[#111111]" />,
-      title: "Data Analytics & Insights",
-      desc: "Transforming raw data streams into actionable executive stories, statistical metrics, and interactive decision dashboards."
-    },
-    {
-      icon: <BrainCircuit className="w-5 h-5 text-[#111111]" />,
-      title: "Machine Learning (ML)",
-      desc: "Building predictive ML models, trend classification pipelines, and statistical analysis using Scikit-Learn, Python & Pandas."
-    },
-    {
-      icon: <Database className="w-5 h-5 text-[#111111]" />,
-      title: "Data Engineering & SQL",
-      desc: "Architecting high-throughput SQL databases, PostgreSQL/MongoDB schemas, and automated ETL data ingestion pipelines."
-    }
-  ];
-
   return (
     <section id="about" className="relative w-full py-8 px-3 sm:px-6 md:px-8">
       {/* Editorial Light Container Card Matching Hero Card */}
-      <div className="relative w-full max-w-7xl mx-auto bg-[#eae8e3] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 overflow-hidden shadow-2xl border border-black/5 flex flex-col gap-12">
+      <div className="relative w-full max-w-7xl mx-auto bg-[#eae8e3] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 overflow-hidden shadow-2xl border border-black/5 flex flex-col gap-10">
         
         {/* Top Tagline / Meta Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-black/10 pb-6">
@@ -58,7 +33,7 @@ export const AboutSection: React.FC = () => {
         {/* Hero-Harmonized Grid: Left Bio & Headline + Right Portrait Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Left Column: Headline, Bio & Stat Grid (7 Cols) */}
+          {/* Left Column: Display Headline, Bio & Learning Card (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             
             {/* Display Headline */}
@@ -76,7 +51,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             {/* Currently Learning Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border border-black/10 flex items-center gap-3.5 shadow-sm mt-1">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border border-black/10 flex items-center gap-3.5 shadow-sm mt-2">
               <div className="p-2.5 rounded-xl bg-amber-100/80 border border-amber-300 shrink-0">
                 <Sparkles className="w-5 h-5 text-amber-700" />
               </div>
@@ -88,20 +63,6 @@ export const AboutSection: React.FC = () => {
                   {PORTFOLIO_DATA.profile.learning}
                 </span>
               </div>
-            </div>
-
-            {/* Stat Badges Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              {stats.map((stat, idx) => (
-                <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-2xl p-3.5 border border-black/5 flex flex-col items-center text-center shadow-sm">
-                  <span className="text-xl sm:text-2xl font-black text-[#0f0f0f] font-display">
-                    {stat.value}
-                  </span>
-                  <span className="text-[0.65rem] font-extrabold text-neutral-600 uppercase tracking-wider mt-0.5">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
             </div>
 
           </div>
@@ -149,66 +110,6 @@ export const AboutSection: React.FC = () => {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-        </div>
-
-        {/* Core Pillars & Education Timeline Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-t border-black/10 pt-10 mt-2">
-          
-          {/* Left: 3 Core Pillars (7 Cols) */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
-            <h3 className="text-xs font-extrabold tracking-[0.25em] text-[#111111] uppercase mb-1">
-              CORE EXPERTISE &amp; SPECIALIZATION
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {coreFocus.map((pillar, idx) => (
-                <div key={idx} className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border border-black/5 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                  <div className="p-2 rounded-xl bg-[#eae8e3] border border-black/5 shrink-0 w-fit mb-3">
-                    {pillar.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-extrabold text-[#0f0f0f] font-sans">
-                      {pillar.title}
-                    </h4>
-                    <p className="text-[0.7rem] text-neutral-700 leading-relaxed mt-1.5 font-sans">
-                      {pillar.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: Academic Background (5 Cols) */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="flex items-center gap-2 mb-1">
-              <GraduationCap className="w-4 h-4 text-[#111111]" />
-              <h3 className="text-xs font-extrabold tracking-[0.25em] text-[#111111] uppercase">
-                ACADEMIC EDUCATION
-              </h3>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              {PORTFOLIO_DATA.education.map((edu, idx) => (
-                <div key={idx} className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border border-black/5 shadow-sm flex flex-col justify-between">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-sm font-extrabold text-[#0f0f0f] font-sans">
-                      {edu.degree}
-                    </h4>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#0f0f0f] text-white text-[0.6rem] font-extrabold tracking-widest uppercase shrink-0">
-                      {edu.period}
-                    </span>
-                  </div>
-                  <p className="text-xs font-semibold text-neutral-700 font-sans mt-1">
-                    {edu.field}
-                  </p>
-                  <p className="text-[0.7rem] text-neutral-600 font-medium mt-2 pt-2 border-t border-black/5 font-sans">
-                    {edu.institution}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
 

@@ -152,7 +152,7 @@ export const PORTFOLIO_DATA = {
       platform: "LeetCode",
       username: "surajg2",
       url: "https://leetcode.com/u/surajg2/",
-      icon: "https://img.icons8.com/?size=100&id=w9gsKSM38X2h&format=png&color=000000",
+      icon: "https://cdn.simpleicons.org/leetcode/FFA116",
       stats: "350+ Problems Solved",
       color: "#FFA116"
     },
@@ -160,7 +160,7 @@ export const PORTFOLIO_DATA = {
       platform: "CodeChef",
       username: "surajg2",
       url: "https://www.codechef.com/users/surajg2",
-      icon: "https://img.icons8.com/color/48/codechef.png",
+      icon: "https://cdn.simpleicons.org/codechef/5B4638",
       stats: "3★ Rated Programmer",
       color: "#5B4638"
     },
@@ -168,7 +168,7 @@ export const PORTFOLIO_DATA = {
       platform: "Kaggle",
       username: "surajg2",
       url: "https://www.kaggle.com/surajg2",
-      icon: "https://img.icons8.com/?size=100&id=bcdiBt8pFXfZ&format=png&color=000000",
+      icon: "https://cdn.simpleicons.org/kaggle/20BEFF",
       stats: "Datasets & Notebook Contributor",
       color: "#20BEFF"
     },
@@ -176,7 +176,7 @@ export const PORTFOLIO_DATA = {
       platform: "GeeksforGeeks",
       username: "g8808jimh",
       url: "https://www.geeksforgeeks.org/profile/g8808jimh",
-      icon: "https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000",
+      icon: "https://cdn.simpleicons.org/geeksforgeeks/2F9E44",
       stats: "Overall Score: 850+",
       color: "#2F9E44"
     },
@@ -184,7 +184,7 @@ export const PORTFOLIO_DATA = {
       platform: "HackerRank",
       username: "g88084011",
       url: "https://www.hackerrank.com/profile/g88084011",
-      icon: "https://img.icons8.com/?size=100&id=QrYhwpUzAcoy&format=png&color=000000",
+      icon: "https://cdn.simpleicons.org/hackerrank/2EC4B6",
       stats: "5★ Problem Solving",
       color: "#2EC4B6"
     }

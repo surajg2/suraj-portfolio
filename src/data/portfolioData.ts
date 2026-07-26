@@ -37,8 +37,8 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/surajg2",
     linkedin: "https://www.linkedin.com/in/suraj-gupta-11b044371/",
     twitter: "https://x.com/suraaajjjj",
-    email: "surajgupta2006@gmail.com",
-    phone: "+91 9876543210",
+    email: "g8808401@gmail.com",
+    phone: "+91 8983791138",
   },
   education: [
     {

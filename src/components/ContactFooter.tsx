@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Linkedin, Github, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export const ContactFooter: React.FC = () => {
@@ -155,7 +155,7 @@ export const ContactFooter: React.FC = () => {
               <span className="text-[0.65rem] font-black uppercase tracking-widest text-neutral-500 mb-3 block font-sans">
                 SOCIAL PLATFORMS
               </span>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <a
                   href={profile.github}
                   target="_blank"
@@ -173,6 +173,15 @@ export const ContactFooter: React.FC = () => {
                 >
                   <Linkedin className="w-4 h-4 text-amber-400" />
                   <span>LINKEDIN</span>
+                </a>
+                <a
+                  href={profile.twitter || "https://x.com/suraaajjjj"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-full bg-black text-white text-xs font-extrabold uppercase tracking-wider flex items-center gap-2 hover:bg-neutral-800 transition-all shadow-sm"
+                >
+                  <Twitter className="w-4 h-4 text-amber-400" />
+                  <span>X (TWITTER)</span>
                 </a>
               </div>
             </div>

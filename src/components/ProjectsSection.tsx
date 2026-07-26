@@ -149,9 +149,9 @@ export const ProjectsSection: React.FC = () => {
           </div>
         )}
 
-        {/* 2. EXPANDED LUXURY CRIMSON MODAL SHOWCASE (Matching Reference Image) */}
+        {/* 2. EXPANDED LUXURY NOIR MODAL SHOWCASE (Matching Reference Layout) */}
         {expandedPanel !== 'none' && activeItem && (
-          <div className="relative w-full bg-[#800a0a] rounded-[2.5rem] p-6 sm:p-10 md:p-12 text-white overflow-hidden shadow-2xl border border-white/10 transition-all duration-700 animate-fadeIn min-h-[500px] flex flex-col justify-between">
+          <div className="relative w-full bg-[#0f0f0f] rounded-[2.5rem] p-6 sm:p-10 md:p-12 text-white overflow-hidden shadow-2xl border border-white/10 transition-all duration-700 animate-fadeIn min-h-[500px] flex flex-col justify-between">
             
             {/* Background Typography Watermark */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/5 font-black text-7xl sm:text-9xl md:text-[14rem] uppercase tracking-widest pointer-events-none select-none font-display whitespace-nowrap">

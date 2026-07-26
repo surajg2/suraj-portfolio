@@ -83,66 +83,66 @@ export const PORTFOLIO_DATA = {
   projects: [
     {
       id: "dumbell-detection-ai",
-      title: "Computer Vision Dumbbell Pose & Exercise Detection AI",
-      subtitle: "Machine Learning & Computer Vision",
-      description: "Deep learning computer vision system utilizing OpenCV and custom ML pose weights to track dumbbell exercise form, count repetitions in real-time, and calculate workout metrics.",
+      title: "Dumbbell AI",
+      subtitle: "Computer Vision & ML Pose Tracking",
+      description: "Deep learning computer vision system utilizing OpenCV to track dumbbell exercise form, count repetitions in real-time, and calculate workout metrics.",
       category: "SIDE PROJECTS",
-      tags: ["OpenCV", "Python", "Machine Learning", "Computer Vision", "PyTorch"],
+      tags: ["OpenCV", "Python", "Machine Learning", "PyTorch"],
       githubUrl: "https://github.com/surajg2/dumbell_detection",
       liveUrl: "https://github.com/surajg2/dumbell_detection",
       image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1000&q=80",
       date: "2024",
-      highlights: ["Real-Time Repetition Counting", "OpenCV Pose & Weight Tracking", "Custom ML Model Metrics"]
+      highlights: ["Real-Time Rep Counting", "OpenCV Pose Tracking", "Custom ML Metrics"]
     },
     {
       id: "indias-medicine-bank",
-      title: "India's Medicine Bank (IMB) - Healthcare Analytics & Supply Platform",
-      subtitle: "Full-Stack Data Engineering & Web App",
-      description: "Data-driven healthcare distribution platform built with Python Flask, SQLite, and automated inventory pipelines to track medicine donations, analyze expiry timelines, and allocate medical resources.",
+      title: "India's Medicine Bank",
+      subtitle: "Healthcare Supply & Inventory Platform",
+      description: "Data-driven healthcare distribution platform built with Python Flask & SQLite to track medicine donations, analyze expiry timelines, and allocate medical resources.",
       category: "SIDE PROJECTS",
-      tags: ["Python", "Flask", "SQLite", "Data Analytics", "Render Cloud"],
+      tags: ["Python", "Flask", "SQLite", "Render Cloud"],
       githubUrl: "https://github.com/surajg2/IMB-Indias-Medicine-Bank-",
       liveUrl: "https://github.com/surajg2/IMB-Indias-Medicine-Bank-",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
       date: "2024",
-      highlights: ["Automated Stock & Expiry Tracking", "SQLite Database Architecture", "Deployed on Cloud Infrastructure"]
+      highlights: ["Automated Expiry Tracking", "SQLite Database", "Cloud Deployment"]
     },
     {
       id: "ibm-data-science-analytics",
-      title: "IBM Data Science & Predictive Analytics Capstone",
-      subtitle: "Data Analytics & Machine Learning",
-      description: "Comprehensive data analysis suite containing exploratory data analysis (EDA), SQL data warehousing, predictive machine learning models, and interactive data visualization notebooks.",
+      title: "IBM Data Science",
+      subtitle: "Predictive Analytics & SQL Warehousing",
+      description: "Comprehensive data analysis suite containing exploratory data analysis (EDA), SQL data warehousing, predictive machine learning models, and visualization notebooks.",
       category: "SIDE PROJECTS",
-      tags: ["Python", "SQL", "Scikit-Learn", "EDA", "Data Analytics"],
+      tags: ["Python", "SQL", "Scikit-Learn", "EDA"],
       githubUrl: "https://github.com/surajg2/IBM",
       liveUrl: "https://github.com/surajg2/IBM",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
       date: "2024",
-      highlights: ["Exploratory Data Analysis (EDA)", "Machine Learning Model Evaluation", "SQL Data Aggregations"]
+      highlights: ["Exploratory Data Analysis", "ML Model Evaluation", "SQL Warehousing"]
     },
     {
       id: "devlog-dumbell-ai",
-      title: "Building Real-Time Computer Vision AI Models for Dumbbell Exercise Tracking",
-      subtitle: "Devlog #1 • Machine Learning & OpenCV",
-      description: "Detailed breakdown of engineering computer vision pipelines, custom ML pose keypoints, real-time video frame processing, and rep count algorithms.",
+      title: "Dumbbell AI Devlog",
+      subtitle: "OpenCV & Pose Keypoint Engineering",
+      description: "Engineering computer vision pipelines, custom ML pose keypoints, real-time video frame processing, and rep count algorithms.",
       category: "DEVLOGS & MY STORY",
-      tags: ["Devlog", "OpenCV", "Machine Learning", "Python"],
+      tags: ["Devlog", "OpenCV", "Python"],
       githubUrl: "https://github.com/surajg2/dumbell_detection",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80",
       date: "Nov 2024",
-      highlights: ["OpenCV Frame Processing", "Custom ML Weight Tracking", "Real-Time Metric Calculation"]
+      highlights: ["OpenCV Frame Processing", "Custom ML Weight Tracking"]
     },
     {
       id: "devlog-medicine-bank-architecture",
-      title: "Architecting India's Medicine Bank: Database Schemas & Expiry Analytics",
-      subtitle: "Devlog #2 • Data Engineering & Healthcare Analytics",
-      description: "Personal insights on designing relational SQLite schemas for medicine inventory tracking, automated stock aggregation, and deploying Flask apps on Render.",
+      title: "Medicine Bank Devlog",
+      subtitle: "Database Schemas & Expiry Analytics",
+      description: "Designing relational SQLite schemas for medicine inventory tracking, automated stock aggregation, and deploying Flask apps on Render.",
       category: "DEVLOGS & MY STORY",
-      tags: ["Devlog", "Data Engineering", "Python", "SQLite"],
+      tags: ["Devlog", "Python", "SQLite"],
       githubUrl: "https://github.com/surajg2/IMB-Indias-Medicine-Bank-",
       image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80",
       date: "Oct 2024",
-      highlights: ["Database Schema Optimization", "Expiry Timeline Analytics", "Full-Stack Deployment"]
+      highlights: ["Schema Optimization", "Expiry Analytics"]
     }
   ] as ProjectItem[],
 

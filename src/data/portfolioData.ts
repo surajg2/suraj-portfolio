@@ -150,40 +150,40 @@ export const PORTFOLIO_DATA = {
   codingProfiles: [
     {
       platform: "LeetCode",
-      username: "surajgupta",
-      url: "https://leetcode.com/u/surajgupta/",
+      username: "surajg2",
+      url: "https://leetcode.com/u/surajg2/",
       icon: "https://img.icons8.com/?size=100&id=w9gsKSM38X2h&format=png&color=000000",
       stats: "350+ Problems Solved",
       color: "#FFA116"
     },
     {
       platform: "CodeChef",
-      username: "surajgupta",
-      url: "https://www.codechef.com/users/surajgupta",
+      username: "surajg2",
+      url: "https://www.codechef.com/users/surajg2",
       icon: "https://img.icons8.com/color/48/codechef.png",
       stats: "3★ Rated Programmer",
       color: "#5B4638"
     },
     {
       platform: "Kaggle",
-      username: "surajgupta",
-      url: "https://www.kaggle.com/surajgupta",
+      username: "surajg2",
+      url: "https://www.kaggle.com/surajg2",
       icon: "https://img.icons8.com/?size=100&id=bcdiBt8pFXfZ&format=png&color=000000",
       stats: "Datasets & Notebook Contributor",
       color: "#20BEFF"
     },
     {
       platform: "GeeksforGeeks",
-      username: "surajgupta",
-      url: "https://www.geeksforgeeks.org/profile/surajgupta",
+      username: "surajg2",
+      url: "https://www.geeksforgeeks.org/profile/surajg2",
       icon: "https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000",
       stats: "Overall Score: 850+",
       color: "#2F9E44"
     },
     {
       platform: "HackerRank",
-      username: "surajgupta",
-      url: "https://www.hackerrank.com/surajgupta",
+      username: "surajg2",
+      url: "https://www.hackerrank.com/surajg2",
       icon: "https://img.icons8.com/?size=100&id=QrYhwpUzAcoy&format=png&color=000000",
       stats: "5★ Problem Solving",
       color: "#2EC4B6"

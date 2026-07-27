@@ -1,8 +1,12 @@
 import React from 'react';
-import { MapPin, Sparkles, BrainCircuit, GraduationCap } from 'lucide-react';
+import { MapPin, Sparkles, BrainCircuit, GraduationCap, FileText } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
-export const AboutSection: React.FC = () => {
+interface AboutSectionProps {
+  onOpenResume?: () => void;
+}
+
+export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
   return (
     <section id="about" className="relative w-full py-8 px-3 sm:px-6 md:px-8">
       {/* Editorial Light Container Card Matching Hero Card */}
@@ -49,6 +53,19 @@ export const AboutSection: React.FC = () => {
             <p className="text-xs sm:text-sm text-neutral-700 font-normal leading-relaxed font-sans">
               I specialize in analyzing complex datasets, engineering reliable SQL ETL data pipelines, and building predictive Machine Learning models. I thrive on translating multi-dimensional data into strategic business intelligence.
             </p>
+
+            {/* Resume Action Trigger Button */}
+            {onOpenResume && (
+              <div className="pt-1">
+                <button
+                  onClick={onOpenResume}
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-black text-white text-xs font-extrabold tracking-widest uppercase hover:bg-neutral-800 hover:scale-105 transition-all shadow-md"
+                >
+                  <FileText className="w-4 h-4 text-amber-400" />
+                  <span>VIEW FULL RESUME</span>
+                </button>
+              </div>
+            )}
 
             {/* Currently Learning Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border border-black/10 flex items-center gap-3.5 shadow-sm mt-2">

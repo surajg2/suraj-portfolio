@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, FileText } from 'lucide-react';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onOpenResume?: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('HOME');
 

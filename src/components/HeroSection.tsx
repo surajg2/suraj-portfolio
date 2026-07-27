@@ -1,7 +1,11 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
-export const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  onOpenResume?: () => void;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
   return (
     <section id="home" className="relative w-full py-6 sm:py-8 px-3 sm:px-6 md:px-8 flex flex-col justify-center min-h-[90vh]">
       {/* Editorial Light Container Card */}

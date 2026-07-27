@@ -26,8 +26,8 @@ export const App: React.FC = () => {
       {/* Background Cyber Grid */}
       <GridOverlay />
 
-      {/* Floating Glass Navbar */}
-      <Navbar onOpenResume={() => setIsResumeOpen(true)} />
+      {/* Floating Glass Navbar (Hidden as requested) */}
+      {/* <Navbar onOpenResume={() => setIsResumeOpen(true)} /> */}
 
       {/* Main Content Layer */}
       <main className="relative z-10">

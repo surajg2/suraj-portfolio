@@ -25,8 +25,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         {/* Central Display Headline & Razor Sharp Portrait Cutout Container */}
         <div className="relative z-10 my-auto py-4 sm:py-8 flex flex-col justify-center items-start w-full">
           
-          {/* Central Standing Portrait Cutout (z-30 FOREGROUND LAYER - PERFECTLY PROPORTIONED IN LIGHT CARD) */}
-          <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-sm sm:max-w-md lg:max-w-xl h-[95%] sm:h-[105%] lg:h-[110%] z-30 pointer-events-none flex justify-center items-end">
+          {/* Central Standing Portrait Cutout (z-30 FOREGROUND LAYER - PERFECTLY PROPORTIONED FOR ALL DEVICES) */}
+          <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-[75vw] xs:max-w-xs sm:max-w-md lg:max-w-xl h-[80%] xs:h-[92%] sm:h-[105%] lg:h-[110%] z-30 pointer-events-none flex justify-center items-end">
             <img
               src="/hero_portrait.png?v=rembg100"
               alt="Suraj Gupta - Data Analyst & Data Engineer"
@@ -39,14 +39,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
 
           {/* Massive Display Headline (z-10 BACKGROUND LAYER - BEHIND PORTRAIT) */}
           <div className="relative z-10 select-none w-full pointer-events-none">
-            <h1 className="flex flex-col items-start w-full leading-[0.85] text-[#0f0f0f] max-w-full">
-              <span className="block font-display font-black text-[1.8rem] xs:text-[2.4rem] sm:text-[3.6rem] md:text-[4.8rem] lg:text-[6.0rem] xl:text-[7.2rem] tracking-tighter uppercase whitespace-nowrap text-[#0f0f0f]">
+            <h1 className="flex flex-col items-start w-full leading-[0.88] sm:leading-[0.85] text-[#0f0f0f] max-w-full">
+              <span className="block font-display font-black text-[1.3rem] xs:text-[1.8rem] sm:text-[3.2rem] md:text-[4.6rem] lg:text-[6.0rem] xl:text-[7.2rem] tracking-tighter uppercase whitespace-nowrap text-[#0f0f0f]">
                 TRANSFORMING
               </span>
-              <span className="block font-serif italic font-normal text-[2.2rem] xs:text-[2.8rem] sm:text-[4.2rem] md:text-[5.4rem] lg:text-[6.8rem] xl:text-[8.0rem] tracking-tight pl-3 sm:pl-8 md:pl-14 lg:pl-20 text-[#111111] whitespace-nowrap">
+              <span className="block font-serif italic font-normal text-[1.5rem] xs:text-[2.2rem] sm:text-[3.8rem] md:text-[5.2rem] lg:text-[6.8rem] xl:text-[8.0rem] tracking-tight pl-2 xs:pl-3 sm:pl-8 md:pl-14 lg:pl-20 text-[#111111] whitespace-nowrap">
                 DATA INTO
               </span>
-              <span className="block font-display font-black text-[2.2rem] xs:text-[2.8rem] sm:text-[4.4rem] md:text-[5.6rem] lg:text-[7.0rem] xl:text-[8.2rem] tracking-tighter uppercase whitespace-nowrap text-[#0f0f0f]">
+              <span className="block font-display font-black text-[1.5rem] xs:text-[2.2rem] sm:text-[3.8rem] md:text-[5.4rem] lg:text-[7.0rem] xl:text-[8.2rem] tracking-tighter uppercase whitespace-nowrap text-[#0f0f0f]">
                 INSIGHTS.
               </span>
             </h1>

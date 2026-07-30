@@ -10,7 +10,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
     <section id="home" className="relative w-full py-4 sm:py-8 px-2.5 sm:px-6 md:px-8 flex flex-col justify-center min-h-[90vh]">
       {/* Editorial Light Container Card */}
       <div className="relative w-full max-w-7xl mx-auto bg-[#eae8e3] rounded-[1.8rem] sm:rounded-[2.5rem] p-5 sm:p-10 md:p-14 lg:p-16 overflow-hidden shadow-2xl border border-black/5 flex flex-col justify-between min-h-[82vh] sm:min-h-[85vh] lg:min-h-[88vh]">
-        
+
         {/* Static Background Ambient Glow */}
         <div className="absolute top-[10%] right-[15%] w-72 sm:w-96 h-72 sm:h-96 bg-amber-100/60 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-stone-300/40 rounded-full blur-3xl pointer-events-none" />
@@ -37,17 +37,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
           />
         </div>
 
-        {/* Central Display Headline (z-10 BACKGROUND LAYER - BEHIND PORTRAIT - ZERO CLIPPING) */}
-        <div className="relative z-10 my-auto py-2 sm:py-6 flex flex-col justify-center items-start w-full">
+        {/* Display Headline - Positioned upper-card so TRANSFORMING is 100% unobstructed */}
+        <div className="relative z-10 mt-2 sm:mt-4 mb-auto py-2 sm:py-4 flex flex-col justify-start items-start w-full">
           <div className="relative z-10 select-none w-full pointer-events-none">
-            <h1 className="flex flex-col items-start w-full leading-[0.92] sm:leading-[0.85] text-[#0f0f0f] max-w-full">
-              <span className="block font-display font-black text-[5.4vw] xs:text-[5.8vw] sm:text-[5.2vw] md:text-[5.4vw] lg:text-[5.4rem] xl:text-[6.4rem] tracking-tight uppercase text-[#0f0f0f] max-w-full">
+            <h1 className="flex flex-col items-start w-full leading-[0.88] sm:leading-[0.84] text-[#0f0f0f] max-w-full">
+              <span className="block font-display font-black text-[6.2vw] xs:text-[6.5vw] sm:text-[5.4vw] md:text-[5.6vw] lg:text-[5.6rem] xl:text-[6.8rem] tracking-tight uppercase text-[#0f0f0f] max-w-full">
                 TRANSFORMING
               </span>
-              <span className="block font-serif italic font-normal text-[6.8vw] xs:text-[7.2vw] sm:text-[6.2vw] md:text-[6.4vw] lg:text-[6.2rem] xl:text-[7.2rem] tracking-tight pl-1.5 sm:pl-8 md:pl-14 lg:pl-16 text-[#111111] max-w-full">
+              <span className="block font-serif italic font-normal text-[7.4vw] xs:text-[7.8vw] sm:text-[6.4vw] md:text-[6.6vw] lg:text-[6.4rem] xl:text-[7.6rem] tracking-tight pl-2 sm:pl-8 md:pl-14 lg:pl-16 text-[#111111] max-w-full">
                 DATA INTO
               </span>
-              <span className="block font-display font-black text-[6.8vw] xs:text-[7.2vw] sm:text-[6.2vw] md:text-[6.4vw] lg:text-[6.4rem] xl:text-[7.4rem] tracking-tight uppercase text-[#0f0f0f] max-w-full">
+              <span className="block font-display font-black text-[7.4vw] xs:text-[7.8vw] sm:text-[6.4vw] md:text-[6.6vw] lg:text-[6.6rem] xl:text-[7.8rem] tracking-tight uppercase text-[#0f0f0f] max-w-full">
                 INSIGHTS.
               </span>
             </h1>
@@ -69,7 +69,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
             <p className="text-[0.7rem] sm:text-xs md:text-sm text-neutral-800 font-medium leading-relaxed font-sans">
               I transform complex datasets into actionable business analytics and build high-performance data engineering pipelines that create impact.
             </p>
-            
+
             <a
               href="#projects"
               className="group flex items-center gap-2.5 sm:gap-3 text-[0.65rem] sm:text-xs font-extrabold uppercase tracking-widest text-[#111111] hover:text-black transition-all pointer-events-auto"

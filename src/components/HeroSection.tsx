@@ -16,40 +16,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         <div className="absolute bottom-0 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-stone-300/40 rounded-full blur-3xl pointer-events-none" />
 
         {/* Top Tagline / Subtitle */}
-        <div className="relative z-10 mb-4 sm:mb-10 flex items-center justify-between">
+        <div className="relative z-10 mb-4 sm:mb-8 flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#111111] animate-pulse" />
-            <p className="text-[0.65rem] sm:text-xs md:text-sm font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-[#111111] uppercase font-sans">
+            <p className="text-[0.65rem] sm:text-xs md:text-sm font-extrabold tracking-[0.18em] sm:tracking-[0.25em] text-[#111111] uppercase font-sans">
               DATA ANALYST &amp; DATA ENGINEER
             </p>
           </div>
         </div>
 
-        {/* Central Display Headline & Razor Sharp Portrait Cutout Container */}
-        <div className="relative z-10 my-auto py-2 sm:py-8 flex flex-col justify-center items-start w-full">
-          
-          {/* Standing Portrait Cutout (z-30 FOREGROUND LAYER - BALANCED FIT FOR ALL SCREENS) */}
-          <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-[65vw] sm:max-w-sm md:max-w-md lg:max-w-lg h-[70%] sm:h-[82%] lg:h-[92%] z-30 pointer-events-none flex justify-center items-end opacity-90 sm:opacity-100">
-            <img
-              src="/hero_portrait.png?v=rembg100"
-              alt="Suraj Gupta - Data Analyst & Data Engineer"
-              className="h-full w-auto object-contain object-bottom filter drop-shadow-2xl brightness-[1.02] contrast-[1.02]"
-              style={{
-                imageRendering: 'crisp-edges',
-              }}
-            />
-          </div>
+        {/* Standing Portrait Cutout - ANCHORED TO ENTIRE HERO CARD (BIG & PROMINENT COVERAGE) */}
+        <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-[85vw] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-[72%] sm:h-[82%] lg:h-[92%] z-30 pointer-events-none flex justify-center items-end">
+          <img
+            src="/hero_portrait.png?v=rembg100"
+            alt="Suraj Gupta - Data Analyst & Data Engineer"
+            className="h-full w-auto object-contain object-bottom filter drop-shadow-2xl brightness-[1.02] contrast-[1.02] scale-105 sm:scale-100 transform origin-bottom"
+            style={{
+              imageRendering: 'crisp-edges',
+            }}
+          />
+        </div>
 
-          {/* Fluid Display Headline (z-10 BACKGROUND LAYER - BEHIND PORTRAIT - 0% CLIPPING) */}
+        {/* Central Display Headline (z-10 BACKGROUND LAYER - BEHIND PORTRAIT - ZERO CLIPPING) */}
+        <div className="relative z-10 my-auto py-2 sm:py-6 flex flex-col justify-center items-start w-full">
           <div className="relative z-10 select-none w-full pointer-events-none">
-            <h1 className="flex flex-col items-start w-full leading-[0.9] sm:leading-[0.85] text-[#0f0f0f] max-w-full overflow-hidden">
-              <span className="block font-display font-black text-[7vw] sm:text-[5.2vw] md:text-[5.5vw] lg:text-[5.4rem] xl:text-[6.4rem] tracking-tight uppercase whitespace-nowrap text-[#0f0f0f]">
+            <h1 className="flex flex-col items-start w-full leading-[0.92] sm:leading-[0.85] text-[#0f0f0f] max-w-full">
+              <span className="block font-display font-black text-[5.4vw] xs:text-[5.8vw] sm:text-[5.2vw] md:text-[5.4vw] lg:text-[5.4rem] xl:text-[6.4rem] tracking-tight uppercase text-[#0f0f0f] max-w-full">
                 TRANSFORMING
               </span>
-              <span className="block font-serif italic font-normal text-[8.2vw] sm:text-[6.2vw] md:text-[6.5vw] lg:text-[6.2rem] xl:text-[7.2rem] tracking-tight pl-2 sm:pl-8 md:pl-14 lg:pl-16 text-[#111111] whitespace-nowrap">
+              <span className="block font-serif italic font-normal text-[6.8vw] xs:text-[7.2vw] sm:text-[6.2vw] md:text-[6.4vw] lg:text-[6.2rem] xl:text-[7.2rem] tracking-tight pl-1.5 sm:pl-8 md:pl-14 lg:pl-16 text-[#111111] max-w-full">
                 DATA INTO
               </span>
-              <span className="block font-display font-black text-[8.2vw] sm:text-[6.2vw] md:text-[6.5vw] lg:text-[6.4rem] xl:text-[7.4rem] tracking-tight uppercase whitespace-nowrap text-[#0f0f0f]">
+              <span className="block font-display font-black text-[6.8vw] xs:text-[7.2vw] sm:text-[6.2vw] md:text-[6.4vw] lg:text-[6.4rem] xl:text-[7.4rem] tracking-tight uppercase text-[#0f0f0f] max-w-full">
                 INSIGHTS.
               </span>
             </h1>
@@ -57,11 +55,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         </div>
 
         {/* Bottom Bar: Scroll Indicator (Left) & Bio / CTA (Right) */}
-        <div className="relative z-30 pt-6 sm:pt-8 mt-auto flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 sm:gap-6">
+        <div className="relative z-30 pt-4 sm:pt-8 mt-auto flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 sm:gap-6">
           {/* Bottom Left: Scroll to explore */}
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#111111] animate-ping" />
-            <span className="text-[0.6rem] sm:text-xs font-extrabold tracking-[0.2em] sm:tracking-[0.25em] text-[#111111] uppercase">
+            <span className="text-[0.6rem] sm:text-xs font-extrabold tracking-[0.18em] sm:tracking-[0.25em] text-[#111111] uppercase">
               SCROLL TO EXPLORE
             </span>
           </div>

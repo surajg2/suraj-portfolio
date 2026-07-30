@@ -26,11 +26,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         <div className="relative z-10 my-auto py-4 sm:py-8 flex flex-col justify-center items-start w-full">
           
           {/* Central Standing Portrait Cutout (z-30 FOREGROUND LAYER - 100% VISIBLE) */}
-          <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-md sm:max-w-lg lg:max-w-2xl h-[92%] sm:h-[100%] lg:h-[108%] z-30 pointer-events-none flex justify-center items-end">
+          <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-lg sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl h-[115%] sm:h-[130%] lg:h-[145%] xl:h-[155%] z-30 pointer-events-none flex justify-center items-end">
             <img
               src="/hero_portrait.png?v=rembg100"
               alt="Suraj Gupta - Data Analyst & Data Engineer"
-              className="h-full w-auto object-contain object-bottom filter drop-shadow-2xl brightness-[1.02] contrast-[1.02] max-h-full"
+              className="h-full w-auto object-contain object-bottom filter drop-shadow-2xl brightness-[1.02] contrast-[1.02] scale-110 sm:scale-115 lg:scale-125 transform origin-bottom"
               style={{
                 imageRendering: 'crisp-edges',
               }}

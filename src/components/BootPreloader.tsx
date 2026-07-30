@@ -39,26 +39,51 @@ export const BootPreloader: React.FC<BootPreloaderProps> = ({ onComplete }) => {
         clipPath: isFinished ? 'inset(0 0 100% 0)' : 'inset(0 0 0 0)',
       }}
     >
-      {/* Sci-fi helmet/loader visual container */}
+      {/* Data Analytics Brand Loader Visual Container */}
       <div className="w-[180px] h-[180px] flex items-center justify-center relative mb-4">
         <div className="absolute inset-0 rounded-full border border-white/10 animate-spin-slow" />
-        <div className="absolute inset-3 rounded-full border border-dashed border-[#FF3D00]/30 animate-pulse-slow" />
+        <div className="absolute inset-3 rounded-full border border-dashed border-amber-400/30 animate-pulse-slow" />
         
-        {/* Futuristic SVG Helmet Icon */}
-        <svg
-          className="w-24 h-24 text-white filter drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] animate-pulse"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M12 2C6.48 2 2 6.48 2 12c0 3.87 2.2 7.23 5.4 8.87.5.25.6.5.6.8v.33c0 .83.67 1.5 1.5 1.5h5c.83 0 1.5-.67 1.5-1.5v-.33c0-.3.1-.55.6-.8 3.2-1.64 5.4-5 5.4-8.87 0-5.52-4.48-10-10-10z" />
-          <path d="M9 10h6" />
-          <path d="M9 14h6" />
-          <circle cx="12" cy="12" r="9" strokeOpacity="0.3" />
-        </svg>
+        {/* Sleek Professional Data & Code Monogram Logo */}
+        <div className="relative z-10 flex flex-col items-center justify-center">
+          <svg
+            className="w-20 h-20 text-white filter drop-shadow-[0_0_18px_rgba(251,191,36,0.5)] transition-transform duration-500"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Hexagonal Tech Node Frame */}
+            <polygon
+              points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5"
+              stroke="#FBBF24"
+              strokeWidth="2.5"
+              strokeDasharray="4 4"
+              className="animate-pulse"
+            />
+            {/* Inner Core Data Nodes */}
+            <circle cx="50" cy="50" r="32" stroke="white" strokeWidth="1.5" strokeOpacity="0.4" />
+            <path
+              d="M32 38 C32 32, 68 32, 68 38 C68 44, 32 46, 32 54 C32 64, 68 64, 68 58"
+              stroke="#FBBF24"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M42 66 L58 34"
+              stroke="white"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            {/* Data Pipeline Connection Dots */}
+            <circle cx="50" cy="5" r="3" fill="#FBBF24" />
+            <circle cx="90" cy="27.5" r="3" fill="#FBBF24" />
+            <circle cx="90" cy="72.5" r="3" fill="#FBBF24" />
+            <circle cx="50" cy="95" r="3" fill="#FBBF24" />
+            <circle cx="10" cy="72.5" r="3" fill="#FBBF24" />
+            <circle cx="10" cy="27.5" r="3" fill="#FBBF24" />
+          </svg>
+        </div>
       </div>
 
       {/* Progress Bar Container */}

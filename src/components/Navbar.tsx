@@ -23,9 +23,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
         {/* Brand / Stenciled Logo */}
         <a
           href="#home"
-          className="group flex items-center justify-center text-xl sm:text-2xl font-black tracking-tighter text-[#111111] bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-black/10 shadow-sm hover:scale-105 transition-transform"
+          className="group flex items-center gap-2 text-lg sm:text-xl font-black tracking-tighter text-[#111111] bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-xl border border-black/10 shadow-sm hover:scale-105 transition-transform"
         >
-          <span className="font-display">SG</span>
+          <span className="w-2 h-2 rounded-full bg-amber-500 group-hover:animate-ping" />
+          <span className="font-display font-black tracking-tight text-[#0f0f0f]">SG</span>
+          <span className="text-[0.6rem] font-mono font-bold tracking-widest text-neutral-400 uppercase hidden xs:inline border-l border-black/10 pl-2">
+            DATA &amp; AI
+          </span>
         </a>
 
         {/* Center Desktop Nav */}

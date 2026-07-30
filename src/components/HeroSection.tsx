@@ -7,15 +7,13 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
   return (
-    <section id="home" className="relative w-full pt-16 sm:pt-20 lg:pt-24 pb-6 sm:pb-8 px-3 sm:px-6 md:px-8 flex flex-col justify-center min-h-[90vh] overflow-visible">
+    <section id="home" className="relative w-full py-6 sm:py-8 px-3 sm:px-6 md:px-8 flex flex-col justify-center min-h-[90vh]">
       {/* Editorial Light Container Card */}
-      <div className="relative w-full max-w-7xl mx-auto bg-[#eae8e3] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 shadow-2xl border border-black/5 flex flex-col justify-between min-h-[85vh] lg:min-h-[88vh] overflow-visible">
+      <div className="relative w-full max-w-7xl mx-auto bg-[#eae8e3] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 overflow-hidden shadow-2xl border border-black/5 flex flex-col justify-between min-h-[85vh] lg:min-h-[88vh]">
         
-        {/* Static Background Ambient Glow (Clipped to Card Corners) */}
-        <div className="absolute inset-0 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden pointer-events-none z-0">
-          <div className="absolute top-[10%] right-[15%] w-96 h-96 bg-amber-100/60 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-300/40 rounded-full blur-3xl" />
-        </div>
+        {/* Static Background Ambient Glow */}
+        <div className="absolute top-[10%] right-[15%] w-96 h-96 bg-amber-100/60 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-300/40 rounded-full blur-3xl pointer-events-none" />
 
         {/* Top Tagline / Subtitle */}
         <div className="relative z-10 mb-6 sm:mb-10 flex items-center justify-between">
@@ -27,12 +25,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         {/* Central Display Headline & Razor Sharp Portrait Cutout Container */}
         <div className="relative z-10 my-auto py-4 sm:py-8 flex flex-col justify-center items-start w-full">
           
-          {/* Central Standing Portrait Cutout (z-30 FOREGROUND LAYER - UPPER BODY OVERFLOWS OUT OF CARD) */}
-          <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-lg sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl h-[130%] sm:h-[150%] lg:h-[168%] xl:h-[180%] z-30 pointer-events-none flex justify-center items-end">
+          {/* Central Standing Portrait Cutout (z-30 FOREGROUND LAYER - PERFECTLY PROPORTIONED IN LIGHT CARD) */}
+          <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-full max-w-sm sm:max-w-md lg:max-w-xl h-[95%] sm:h-[105%] lg:h-[110%] z-30 pointer-events-none flex justify-center items-end">
             <img
               src="/hero_portrait.png?v=rembg100"
               alt="Suraj Gupta - Data Analyst & Data Engineer"
-              className="h-full w-auto object-contain object-bottom filter drop-shadow-2xl brightness-[1.02] contrast-[1.02] scale-110 sm:scale-125 lg:scale-135 transform origin-bottom"
+              className="h-full w-auto object-contain object-bottom filter drop-shadow-2xl brightness-[1.02] contrast-[1.02]"
               style={{
                 imageRendering: 'crisp-edges',
               }}

@@ -258,15 +258,28 @@ export const ProjectsSection: React.FC = () => {
                       {activeItem.title}
                     </h4>
 
-                    <a
-                      href={activeItem.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-white text-black hover:bg-amber-400 hover:text-black rounded-full py-3 px-5 text-xs font-extrabold tracking-widest uppercase flex items-center justify-center gap-2 transition-all shadow-lg"
-                    >
-                      <span>VIEW PROJECT</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={activeItem.liveUrl || activeItem.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-white text-black hover:bg-amber-400 hover:text-black rounded-full py-3 px-4 text-xs font-extrabold tracking-widest uppercase flex items-center justify-center gap-2 transition-all shadow-lg"
+                      >
+                        <span>VIEW DEMO</span>
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                      {activeItem.githubUrl && (
+                        <a
+                          href={activeItem.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white hover:bg-amber-400 hover:text-black hover:border-amber-400 flex items-center justify-center transition-all shrink-0"
+                          title="View GitHub Repository"
+                        >
+                          <Github className="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
 

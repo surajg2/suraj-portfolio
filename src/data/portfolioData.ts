@@ -104,7 +104,7 @@ export const PORTFOLIO_DATA = {
       category: "SIDE PROJECTS",
       tags: ["Python", "Flask", "SQLite", "Render Cloud"],
       githubUrl: "https://github.com/surajg2/IMB-Indias-Medicine-Bank-",
-      liveUrl: "https://github.com/surajg2/IMB-Indias-Medicine-Bank-",
+      liveUrl: "https://imb-indias-medicine-bank.onrender.com/",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
       date: "2024",
       highlights: ["Automated Expiry Tracking", "SQLite Database", "Cloud Deployment"]

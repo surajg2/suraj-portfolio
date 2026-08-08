@@ -110,17 +110,29 @@ export const PORTFOLIO_DATA = {
       highlights: ["Automated Expiry Tracking", "SQLite Database", "Cloud Deployment"]
     },
     {
-      id: "ibm-data-science-analytics",
-      title: "IBM Data Science",
-      subtitle: "Predictive Analytics & SQL Warehousing",
-      description: "Comprehensive data analysis suite containing exploratory data analysis (EDA), SQL data warehousing, predictive machine learning models, and visualization notebooks.",
+      id: "apex-analytics-dashboard",
+      title: "Apex Analytics",
+      subtitle: "Enterprise E-Commerce SaaS & ML Dashboard",
+      description: "Production-grade SaaS sales analytics platform processing 22,000+ orders. Features RFM customer segmentation, cohort retention matrices, interactive SQL query engine, and ML-powered revenue forecasting.",
       category: "SIDE PROJECTS",
-      tags: ["Python", "SQL", "Scikit-Learn", "EDA"],
-      githubUrl: "https://github.com/surajg2/IBM",
-      liveUrl: "https://github.com/surajg2/IBM",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
-      date: "2024",
-      highlights: ["Exploratory Data Analysis", "ML Model Evaluation", "SQL Warehousing"]
+      tags: ["Python", "Streamlit", "SQL", "Machine Learning", "Power BI"],
+      githubUrl: "https://github.com/surajg2/apex-analytics-dashboard",
+      liveUrl: "https://apex-analytics-dashboard.streamlit.app/",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+      date: "2025",
+      highlights: ["22,000+ Relational Orders", "RFM & Cohort Retention", "ML Time-Series Forecasting"]
+    },
+    {
+      id: "devlog-apex-analytics",
+      title: "Apex Analytics Devlog",
+      subtitle: "ETL Pipelines & ML Sales Forecasting",
+      description: "Architecting an automated ETL pipeline for 22,000+ orders across 8 relational tables, building RFM segmentation matrices, and training gradient boosting models for daily revenue forecasting.",
+      category: "DEVLOGS & MY STORY",
+      tags: ["Devlog", "Python", "SQL", "Streamlit"],
+      githubUrl: "https://github.com/surajg2/apex-analytics-dashboard",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80",
+      date: "Jan 2025",
+      highlights: ["Star-Schema ETL Pipeline", "ML Revenue Projections"]
     },
     {
       id: "devlog-dumbell-ai",
